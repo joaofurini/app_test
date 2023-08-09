@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     return Column(
       children: [
         TextField(
-          decoration: InputDecoration(hintText: 'Type a number'),
+          decoration: const InputDecoration(hintText: 'Type a number'),
           inputFormatters: <TextInputFormatter>[
             FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
           ],
@@ -31,7 +31,7 @@ class _MainPageState extends State<MainPage> {
           keyboardType: TextInputType.number,
         ),
         TextField(
-          decoration: InputDecoration(hintText: 'Type a number'),
+          decoration: const InputDecoration(hintText: 'Type a number'),
           inputFormatters: <TextInputFormatter>[
             FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
           ], //
@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: submit, child: Text('SUBMIT'))
+            ElevatedButton(onPressed: submit, child: const Text('SUBMIT'))
           ],
         ),
       ),

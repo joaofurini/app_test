@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
-  ResultPage(
+  const ResultPage(
       {super.key,
-      required int this.result,
-      required int this.startNum,
-      required int this.endNum});
+      required this.result,
+      required this.startNum,
+      required this.endNum});
 
-  int? result;
-  int? startNum;
-  int? endNum;
+  final int result;
+  final int startNum;
+  final int endNum;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +24,11 @@ class ResultPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                  'The result of the sum of all the numbers between ${startNum} and ${endNum} is:'),
+                  'The result of the sum of all the numbers between $startNum and $endNum is:'),
             ),
             Text(
               '$result',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ],
         ),
